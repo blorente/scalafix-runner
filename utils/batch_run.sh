@@ -17,7 +17,9 @@ cd codebases
 for project in $( find ./ -mindepth 1 -maxdepth 1 -type d )
 do
     cd $project
-    ../../$SCALAFIX_COMMAND #> "../reports/$( $project )_SCALAFIX_REPORT.txt"
+    REPORTS="../../reports/$project"
+    mkdir -p $REPORTS
+    ../../$SCALAFIX_COMMAND --report "$REPORTS/SCALAFIX_REPORT.txt"
     cd ..
 done
 cd ..
