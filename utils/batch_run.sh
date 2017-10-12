@@ -19,7 +19,7 @@ do
     cd $project
     REPORTS="../../reports/$project"
     mkdir -p $REPORTS
-    ../../$SCALAFIX_COMMAND --report "$REPORTS/SCALAFIX_REPORT.txt"
+    ../../$SCALAFIX_COMMAND --report "$REPORTS"
     cd ..
 done
 cd ..
